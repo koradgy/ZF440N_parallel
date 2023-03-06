@@ -16,7 +16,7 @@ bool is_prime(int n)
     return true;
 }
 
-void prime(int n)
+int prime(int n)
 {
     int primes = 0;
     for (int i = 2; i <= n; i++) {
@@ -24,22 +24,23 @@ void prime(int n)
             primes += 1;
         }
     }
-    printf("Number of primes: %d\n", primes);
+    return primes;
 }
 
 
 int main()
 {
+    FILE *fp;
+    fp = fopen("file.txt","w");
     for (int n = 1000; n <= 20000; n += 1000) 
     {
         clock_t start = clock();
-        prime(n);
+        int a = prime(n);
         clock_t end = clock();
         double time = ((double) (end - start)) / CLOCKS_PER_SEC;
-        printf("Time elapsed for n=%d: %.8f seconds\n\n", n, time);
+        fprintf(fp, "%d ,%d ,%.2f\n",n,a,time);
+       
     }
-
-
-
+    fclose(fp);
     return 0;
 }
