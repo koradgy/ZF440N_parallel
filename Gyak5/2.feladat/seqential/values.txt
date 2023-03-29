@@ -1,0 +1,4 @@
+Program: first, Array size: 600000, runtime: 0.02s
+Program: elojel, Array size: 600000, runtime: 0.03s
+Program: zero, Array size: 600000, runtime: 0.02s
+Program: decimal,  Array size: 600000, runtime: 0.03s

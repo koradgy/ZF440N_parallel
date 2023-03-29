@@ -1,0 +1,1 @@
+Program: first, Arraysize: 600000, runtime: 0.03
