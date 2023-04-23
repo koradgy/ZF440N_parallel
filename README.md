@@ -1,5 +1,5 @@
-#Féléves feladat leírása
-##Miller-Rabin prímkereő módszer
+# Féléves feladat leírása
+## Miller-Rabin prímkereő módszer
 A feladat célja a Miller-Rabin prímkereső módszer párhuzamosítása C nyelven. A Miller-Rabin prímkereső módszer egy hatékony és megbízható prímteszt, amely nagy számok esetén is alkalmazható.
 
 A projektnek tartalmaznia kell a következő részeket:
