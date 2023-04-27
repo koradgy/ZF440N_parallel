@@ -8,4 +8,9 @@ A célunk ebben a projektben az lesz, hogy implementáljuk a Miller-Rabin prímt
 * POSIX szálak
 * OpenMP
 * MPI
-A projekt során implementáljuk az összes fenti megoldást, és összehasonlítjuk azok teljesítményét különböző méretű inputokkal.
+* 
+A projekt során implementáljuk az összes fenti megoldást, és összehasonlítjuk azok teljesítményét különböző méretű inputokkal. Végül a kaptt eredményeket összehasonlítjuk, ezzel vizsgálva, hogy a felhasznált technológiák közül, melyik a legalkalmasabb a feladat megoldásához.
+
+## Párhuzamosítás
+
+A feladatban létrehozunk egy 40 elemű halmazt, amely a vizsgálandó számokat tartalmazza, majd ezeket a számokat osztjuk szét a szálak között, a felsorolt technológiákat alkalmazva 2 illetve 4 szál használatával.
