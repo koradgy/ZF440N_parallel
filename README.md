@@ -1,16 +1,11 @@
 # Féléves feladat leírása
-## Miller-Rabin prímkereő módszer
-A feladat célja a Miller-Rabin prímkereső módszer párhuzamosítása C nyelven. A Miller-Rabin prímkereső módszer egy hatékony és megbízható prímteszt, amely nagy számok esetén is alkalmazható.
+## Miller-Rabin prímkereső módszer
+A Miller-Rabin prímteszt egy hatékony és megbízható algoritmus a prímek gyors és hatékony tesztelésére. Azonban a nagyobb számoknál már a szekvenciális implementáció is lassú lehet. A feladat célja az algoritmus hatékonyságának növelése párhuzamosítással.
 
-A projektnek tartalmaznia kell a következő részeket:
+A célunk ebben a projektben az lesz, hogy implementáljuk a Miller-Rabin prímtesztet párhuzamos algoritmusok segítségével. Konkrétan, az alábbi párhuzamos megoldásokat készítjük el:
 
-miller_rabin_parallel.c fájl: A Miller-Rabin prímkereső párhuzamos C implementációja.
-A feladatnak tartalmaznia kell az alábbi részeket:
-
-A Miller-Rabin prímkereső párhuzamos implementációja C-ben. Az implementációnak lehetővé kell tennie a nagy számok prímtesztelését a számítási idő csökkentése érdekében.
-A Miller-Rabin prímkereső párhuzamos implementációja C-ben a következőképpen valósulhat meg:
-
-A program elkészíti az n szám összes lehetséges tesztelő alapját. Ezek lehetnek véletlenszerű számok vagy előre meghatározott számok.
-A program több szálon teszteli az n számot az összes tesztelő alapja alapján.
-A program visszatérési értéke igaz, ha az n szám prím, hamis, ha összetett.
-
+* Szekvenciális megoldás
+* POSIX szálak
+* OpenMP
+* MPI
+A projekt során implementáljuk az összes fenti megoldást, és összehasonlítjuk azok teljesítményét különböző méretű inputokkal.
