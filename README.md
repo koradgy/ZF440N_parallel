@@ -13,4 +13,4 @@ A projekt során implementáljuk az összes fenti megoldást, és összehasonlí
 
 ## Párhuzamosítás
 
-A feladatban létrehozunk egy 40 elemű halmazt, amely a vizsgálandó számokat tartalmazza, majd ezeket a számokat osztjuk szét a szálak között, a felsorolt technológiákat alkalmazva 2 illetve 4 szál használatával.
+A feladatban létrehozunk egy 40 elemű halmazt, amely a vizsgálandó számokat tartalmazza, majd ezeket a számokat osztjuk szét a szálak között vizsgálatra, a felsorolt technológiákat alkalmazva 1, 2 illetve 4 szál használatával.
