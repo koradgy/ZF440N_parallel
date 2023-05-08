@@ -4,6 +4,8 @@
 A feladat célja egy 100000 elemű tömb rendezése szekvenciálisan, majd szálkezeléssel.
 Végül a kapott eredményeket összehasonlítjuk és az eredmények alapján eldöntjük, melyik módszer a leggyorsabb.
 
+A buborékrendezés egy egyszerű algoritmus, hatékonysága rosszabb, mint a más összehasonlításos rendezési algoritmusoké. Az átlagos és legrosszabb esetben is O(n^2) időkomplexitással rendelkezik, ahol "n" a tömb mérete.
+
 ## A program felépÍtése
 * óra indítása
 * kezdeti tömb létrehozása
