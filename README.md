@@ -6,13 +6,8 @@ Végül a kapott eredményeket összehasonlítjuk és az eredmények alapján el
 
 A buborékrendezés egy egyszerű algoritmus, hatékonysága rosszabb, mint a más összehasonlításos rendezési algoritmusoké. Az átlagos és legrosszabb esetben is O(n^2) időkomplexitással rendelkezik, ahol "n" a tömb mérete.
 
-## A program felépÍtése
-* óra indítása
-* kezdeti tömb létrehozása
-* tömb feltöltése random számokkal
-* a tömb rendezése szálkezelés nélkül, majd pthread/omp/openMPI technológiákkal 2 illetve 4 szálat használva 
-* részidő mérés minden rendezés után
-* A kapott eredmények fájlba írása.
+## A feladat felépÍtése
+A feladatot négy külön programban oldottam meg, minden technológia külön programban kapott helyet.
 
 # A feladatban használt technológiák
 
