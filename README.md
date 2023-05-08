@@ -8,11 +8,13 @@ Végül a kapott eredményeket összehasonlítjuk, az eredmények alapján eldö
 * óra indítása
 * kezdeti tömb létrehozása
 * tömb feltöltése random számokkal
-* a tömb rendezése szálkezelés nélkül, majd pthreads/omp/openMPI technológiákkal 2 illetve 4 szálat használva 
+* a tömb rendezése szálkezelés nélkül, majd pthread/omp/openMPI technológiákkal 2 illetve 4 szálat használva 
 * részidő mérés minden rendezés után
 * A kapott eredmények fájlba írása.
 
-## openMPI
+# A feladatban használt technológiák
+
+## openMPI (Message Passing Interface) 
 A programrész elején inicializáljuk az MPI-t az MPI_Init függvénnyel. Ezután megkapjuk a folyamat sorszámát (rank) és a folyamatok számát (size) az MPI_Comm_rank és MPI_Comm_size függvényekkel.
 
 Létrehozunk egy N méretű egész számokból álló tömböt (arr), amelyet a fő szál (rank 0) fog feltölteni. A malloc függvényt használjuk a dinamikus memóriaterület lefoglalásához.
@@ -23,8 +25,17 @@ Az algoritmus egy buborékrendezést végez a résztömbön. A buborékrendezés
 
 Az MPI_Gather függvénnyel a rendezett résztömbök visszakerülnek az arr tömbbe a fő szálon. Ez összegyűjti a résztömböket és visszatölti az eredményeket az arr tömbbe
 
-## Pthreads
-Egy ciklusban elindítunk előbb 2 majd 4 szálat, majd, ha elkészültek lezárjuk öket.
+## Pthread
+Az algoritmus ugyanaz a buborékrendezési algoritmus, mint az előző példában. A szálak egymástól függetlenül dolgoznak a saját részükön, és nincs szükségük kommunikációra egymás között.
 
-## omp
-pragma omp parallel num threads() segítsegével hasonló módon először 2 majd 4 szálon rendezzük a tömbböt.
+A szálak létrehozásához és futtatásához a pthread könyvtárat használjuk. A pthread_t típusú handles tömbben tároljuk a szálak kezelőit. A pthread_create függvény létrehozza a szálakat és azokat a bubble_sort függvényt hívja meg. A thread változó az adott szál sorszámát jelöli.
+
+A pthread_join függvénnyel a fő szál megvárja, hogy az összes szál befejezze a futását, mielőtt folytatódna a program.
+
+## OpenMP (Open Multi-Processing)
+Az algoritmus a bubble sort ciklusait tartalmazza, de most az OpenMP direktívával párhuzamosítjuk a műveletet. A #pragma omp parallel sorral jelöljük a párhuzamos régiót, és a num_threads(2) opcióval megadjuk, hogy hány szálon szeretnénk futtatni a kódot. Itt például 2 szálat használunk.
+
+Az omp_get_thread_num() függvény visszaadja a folyamat sorszámát, és az omp_get_num_threads() függvény visszaadja a folyamatok számát a párhuzamos régióban. Ezeket a változókat használjuk a buborékrendezés szálankénti felosztásához.
+
+Az algoritmusban a buborékrendezést ugyanúgy végezzük, mint az előző példákban. A különbség az, hogy most a buborékrendezés szálanként történik, és az adott szál csak a hozzárendelt résztömbön dolgozik.
+
