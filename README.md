@@ -2,7 +2,7 @@
 ## Buborékrendezés
 
 A feladat célja egy 100000 elemű tömb rendezése szekvenciálisan, majd szálkezeléssel.
-Végül a kapott eredményeket összehasonlítjuk, az eredmények alapján eldöntjük, melyik módszer a leggyorsabb.
+Végül a kapott eredményeket összehasonlítjuk és az eredmények alapján eldöntjük, melyik módszer a leggyorsabb.
 
 ## A program felépÍtése
 * óra indítása
