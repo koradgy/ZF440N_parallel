@@ -1,7 +1,7 @@
 # Féléves feladat leírása
 ## Buborékrendezés
 
-A feladat célja egy 100000 elemű tömb rendezése szekvenciálisan, majd szálkezeléssel.
+A feladat célja egy 100000 elemű tömb rendezése szekvenciálisan, majd szálkezeléssel. A programok különböző problémaméretekkel is tudnak dolgozni.
 Végül a kapott eredményeket összehasonlítjuk és az eredmények alapján eldöntjük, melyik módszer a leggyorsabb.
 
 A buborékrendezés egy egyszerű algoritmus, hatékonysága rosszabb, mint a más összehasonlításos rendezési algoritmusoké. Az átlagos és legrosszabb esetben is O(n^2) időkomplexitással rendelkezik, ahol "n" a tömb mérete.
