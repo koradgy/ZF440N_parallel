@@ -1,9 +1,0 @@
-Sequential: 51512.00 ms
-Pthread 2 threads: 9134.00 ms
-Pthread 4 threads: 2165.00 ms
-OMP 2 threads: 447.00 ms
-OMP 4 threads: 1020.00 ms
-MPI 2 threads: 12687.00 ms
-MPI 4 threads: 4947.00 ms
-
-MPI parancs : mpirun --oversubscribe <szálak> <program>OMP 6 threads: 19.00 ms
