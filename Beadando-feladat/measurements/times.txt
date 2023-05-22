@@ -1,0 +1,7 @@
+Sequential: 37429.00 ms
+pthread: threads: 2 runtime: 10506.00 ms
+pthread: threads: 4 runtime: 4066.00 ms
+OMP threads: 2 runtime : 39204.00 ms
+OMP threads: 4 runtime : 64318.00 ms
+MPI 2 threads: 9697.00 ms
+MPI 4 threads: 2465.00 ms
